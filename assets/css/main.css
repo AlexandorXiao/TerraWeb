@@ -1,0 +1,163 @@
+@font-face {
+	font-family: "MinecraftTen";
+	src: url(../fonts/minecraft-ten-font-cyrillic.ttf); 
+} 
+@font-face {
+	font-family: "Noto Sans";
+	src: url(../fonts/NotoSans-Regular.ttf); 
+} 
+
+
+
+:root {
+
+    --terra_mc-color-white-5a: rgba(255, 255, 255, 0.05);
+    --terra_mc-color-white-10a: rgba(255, 255, 255, 0.1);
+    --terra_mc-color-white-15a: rgba(255, 255, 255, 0.15);
+    --terra_mc-color-white-20a: rgba(255, 255, 255, 0.2);
+    --terra_mc-color-white-30a: rgba(255, 255, 255, 0.3);
+    --terra_mc-color-white-50a: rgba(255, 255, 255, 0.5);
+    --terra_mc-color-white-70a: rgba(255, 255, 255, 0.7);
+
+    --terra_mc-color-grey-6: #262423;
+    --terra_mc-color-grey-5: #3D3938;
+    --terra_mc-color-grey-4: #6B6562;
+    --terra_mc-color-grey-3: #ABA09C;
+    --terra_mc-color-grey-2: #D0C5C0;
+    --terra_mc-color-grey-1: #EDE5E2;
+    --terra_mc-color-white: #fff;
+    --terra_mc-color-off-white: #FCF5F1;
+
+    --terra_mc-color-dark-black: #0b0b0b;
+    --terra_mc-color-black: #1d1f22;
+    --terra_mc-color-black-5a: rgba(29, 31, 34, .05);
+    --terra_mc-color-black-10a: rgba(29, 31, 34, .1);
+    --terra_mc-color-black-15a: rgba(29, 31, 34, .15);
+    --terra_mc-color-black-20a: rgba(29, 31, 34, .2);
+    --terra_mc-color-black-30a: rgba(29, 31, 34, .3);
+    --terra_mc-color-black-40a: rgba(29, 31, 34, .4);
+    --terra_mc-color-black-50a: rgba(29, 31, 34, .5);
+    --terra_mc-color-black-60a: rgba(29, 31, 34, .6);
+    --terra_mc-color-black-70a: rgba(29, 31, 34, .7);
+    --terra_mc-color-black-80a: rgba(29, 31, 34, .8);
+    --terra_mc-color-black-90a: rgba(29, 31, 34, .9);
+
+    --terra_mc-color-black-10: #e2e0da;
+    --terra_mc-color-black-20: #d2d2d3;
+    --terra_mc-color-black-50: #8e8f90;
+    --terra_mc-color-black-75: #565759;
+    --terra_mc-color-black-90: #343538;
+
+    --terra_mc-color-rich-black: rgb(0, 0, 0);
+    --terra_mc-color-rich-black-50a: rgba(0, 0, 0, 0.5);
+    --terra_mc-color-raw-black: rgb(17, 17, 17);
+    --terra_mc-color-off-black: rgb(23, 22, 21);
+    --terra_mc-color-off-black-50a: rgba(23, 22, 21, 0.5);
+
+
+    --terra_mc-color-text-black: rgb(32, 32, 32);
+    
+
+    
+    
+
+    --terra_mc-color-vanilla-green-6: #2A641C;
+    --terra_mc-color-vanilla-green-5: #3C8527;
+    --terra_mc-color-vanilla-green-4: #52A535;
+    --terra_mc-color-vanilla-green-3: #6CC349;
+    --terra_mc-color-vanilla-green-2: #86D562;
+    --terra_mc-color-vanilla-green-1: #A0E081;
+
+
+    --terra_mc-theme-primary-color: var(--terra_mc-color-white);
+    --terra_mc-theme-secondary-color: var(--terra_mc-color-grey-2);
+    --terra_mc-text-decoration-color: var(--terra_mc-color-white);
+
+
+    /* COMMON */
+    --terra_mc-default-fontlist: "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    --terra_mc-vanilla-fontlist: "MinecraftTen", "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    --terra_mc-navbar-link-active-color: rgba(255, 255, 255, 1);
+    --terra_mc-navbar-link-disabled-color: var(--color-black-20a);
+    --terra_mc-green-link-color: var(--terra_mc-color-vanilla-green-3);
+
+    --terra_mc-light-font-color: var(--terra_mc-theme-primary-color, var(--terra_mc-color-rich-black));
+    --terra_mc-dark-font-color: var(--terra_mc-color-off-black, var(--terra_mc-color-black-10));
+
+    --terra_mc-img-png-shadow-drop-filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+
+    /* BUTTON */
+    --terra_mc-green-button-background: #3b8526;
+    --terra_mc-green-button-background--hover: var(--terra_mc-color-vanilla-green-6);
+    --terra_mc-green-button-box-shadow: inset 0 4px #6bc349, inset 0 -4px #2a631c, 0 4px rgba(0, 0, 0, .25);
+    --terra_mc-green-button-text-shadow: 0 1px 0 #2a631c;
+
+    /* NAVBAR */
+    --terra_mc-navigation-min-height: 110px;
+    --terra_mc-navigation-padding-x: 65px;
+    --terra_mc-navigation-padding-y: 1rem;
+    --terra_mc-navigation-background_fixed: transparent;
+    --terra_mc-navigation-background_scroll: rgba(29, 31, 34, .9);
+    --terra_mc-navigation-background-blur: 10px;
+    --terra_mc-navigation-border-size: 1.5px;
+    --terra_mc-navigation-border-color: var(--terra_mc-color-white-15a);
+    --terra_mc-navigation-box-shadow: 0 4px 0 0 var(--terra_mc-color-off-black);
+    --terra_mc-navigation-brand-gap: .7rem;
+    --terra_mc-navigation-brand-color: var(--terra_mc-color-white);
+    --terra_mc-navigation-brand-font-weight: 700;
+    --terra_mc-navigation-brand-font-size: 1.75rem;
+    --terra_mc-navigation-brand-line-height: 1rem;
+    /*--terra_mc-navigation-highlight-color: var(--color-gold);*/
+    --terra_mc-navigation-link-font-weight: 500;
+    --terra_mc-navigation-link-font-size: 1.10rem;
+    --terra_mc-navigation-link-padding: 0 1rem;
+    --terra_mc-navigation-link-color: var(--terra_mc-color-black-20);
+    --terra_mc-navigation-link-hover-color: var(--terra_mc-color-white);
+    --terra_mc-navigation-br-font-size: 1.35rem;
+    /*BUTTONS*/
+
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --terra-navbar-padding-y: 1.0rem;
+        --terra_mc-navigation-min-height: 70px;
+    }
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: var(--terra_mc-core-white);
+    text-decoration: inherit;
+}
+body {
+    overflow-x: hidden;
+    background-color: #9485ac;
+}
+
+
+
+
+#body-container {}
+
+#body-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.button-primary {
+    background-color: var(--terra_mc-color-vanilla-green-5);
+}
+
+
+
+

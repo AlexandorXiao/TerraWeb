@@ -1,0 +1,224 @@
+
+
+/*### NAVIGATION SECTION ###*/
+.terra-navigation {
+    position: fixed;
+    bottom: auto;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.terra-navigation-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--terra_mc-navigation-min-height);
+    padding: var(--terra_mc-navigation-padding-y) var(--terra_mc-navigation-padding-x);
+    background-color: var(--terra_mc-navigation-background_fixed);
+    border-bottom: var(--terra_mc-navigation-border-size) solid var(--terra_mc-navigation-border-color);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.-is-scrolled {
+    box-shadow: var(--terra_mc-navigation-box-shadow);
+    background-color: var(--terra_mc-navigation-background_scroll);
+    backdrop-filter: blur(var(--terra_mc-navigation-background-blur));
+}
+.terra-navigation-brand {
+    display: flex;
+    align-items: center;
+}
+.terra-navigation-brand-content {
+    align-items: center;
+    display: flex;
+    font-family: var(--terra_mc-vanilla-fontlist);
+    font-weight: var(--terra_mc-navigation-brand-font-weight);
+    font-size: var(--terra_mc-navigation-brand-font-size);
+    line-height: var(--terra_mc-navigation-brand-line-height);
+    color: var(--terra_mc-navigation-brand-color);
+    gap: var(--terra_mc-navigation-brand-gap);
+}
+.terra-navigation-brand-content a {
+    color: var(--terra_mc-navigation-brand-color);
+}
+.terra-navigation-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.terra-navigation-link {
+    justify-content: center;
+    display: flex;
+    color: var(--terra_mc-navigation-link-color);
+    font-family: var(--terra_mc-default-fontlist);
+    font-weight: var(--terra_mc-navigation-link-font-weight);
+    font-size: var(--terra_mc-navigation-link-font-size);
+    /*padding: var(--terra_mc-navigation-link-padding);*/
+}
+.terra-navigation-link:hover {
+    color: var(--terra_mc-navigation-link-hover-color);
+    transition-duration: .15s;
+}
+.terra-navigation-link.active {
+    color: var(--terra_mc-navigation-link-hover-color);
+    pointer-events: none;
+    cursor: default;
+}
+.terra-navigation-link.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+.terra-navigation-link:not(:first-child):before {
+    color: var(--terra_mc-color-vanilla-green-4);
+    content: "|";
+    display: inline-block;
+    margin: 0 .85em;
+    font-weight: 600;
+}
+.navigation-br {
+    font-size: var(--terra_mc-navigation-br-font-size);
+    color: var(--terra_mc-navigation-link-color);
+}
+.terra-navigation-auth, .terra-account-head{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+}
+.terra-auth-button {
+    border-width: 1px;
+    padding: .5rem 1rem;
+    border-color: rgba(255, 255, 255, .05);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 9px 5px -5px rgba(0, 0, 0, 0.6);
+}
+.terra-auth-button span {
+    font-size: 0.9rem;
+    font-weight: 1.0rem;
+}
+.size-10 {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.terra-account-head {
+    /*display: none;*/
+}
+.terra-account-head-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.terra-account-head-container img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10%;
+    border: 3px solid #6b6562;
+    background: #fff;
+    margin-bottom: 6px;
+    vertical-align: middle;
+}
+.terra-account-nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 20px);
+    min-width: 200px;
+    right: 1%;
+}
+.terra-account-head:focus + .terra-account-nav{
+    display:block;
+    transition: all .5s ease;
+}
+.terra-account-nav-container {
+    box-shadow: var(--terra_mc-navigation-box-shadow);
+    background-color: var(--terra_mc-navigation-background_scroll);
+    backdrop-filter: blur(var(--terra_mc-navigation-background-blur));
+    padding: 16px;
+}
+.terra-account-nav-head-container {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--terra_mc-color-grey-5);
+}
+.terra-account-nav-logo-container {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 10%;
+    position: relative;
+}
+.terra-account-nav-logo-container img {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10%;
+}
+.terra-account-nav-name {
+    width: calc(100% - 28px);
+    display: inline-flex;
+    align-items: center;
+}
+.terra-account-nav-name-container {
+    color: var(--terra_mc-color-grey-1);
+    font-size: .75rem;
+    word-wrap: break-word;
+    max-width: 100%;
+    font-family: var(--terra_mc-vanilla-fontlist);
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    color: var(--terra_mc-navigation-brand-color);
+}
+.terra-account-nav-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.terra-account-nav-container li {
+    display: list-item;
+}
+.terra-account-nav-container li:not(:last-child) {
+    border-bottom: 1px solid var(--terra_mc-color-grey-5);
+}
+.terra-account-nav-container li a, .terra-account-nav-exit-button {
+    padding: 12px 0;
+    display: block;
+    color: var(--terra_mc-navigation-link-color);
+    font-family: var(--terra_mc-default-fontlist);
+    font-weight: 700;
+    font-size: .8125rem;
+    letter-spacing: 1.04px;
+    line-height: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+.terra-account-nav-container li:not(:last-child) a:hover {
+    color: var(--terra_mc-color-vanilla-green-4);
+    transition: all .5s ease;
+}
+.terra-account-nav-container li:last-child a:hover {
+    color: #fa0020;
+    transition: all .5s ease;
+}
+[aria-current="disable"]  {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: #6b6562;
+}
+.terra-account-nav-exit-button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font-family: arial, sans-serif;
+  cursor: pointer;
+}

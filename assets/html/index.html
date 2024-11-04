@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <title>TERRA</title> 
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/sliders.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/sliders.js" defer></script>
+</head>
+<body id="body-container">
+
+    <nav class="terra-navigation">
+        <div class="terra-navigation-container">
+            <div class="terra-navigation-brand">
+                <div class="terra-navigation-brand-content">
+                    <a href="/">
+                        <img class="size-10" src="" alt="">
+                    </a>
+                    <a href="/">TERRA</a>
+                </div>
+            </div>
+            <div class="terra-navigation-content">
+                <a class="terra-navigation-link active" aria-current="page" href="/">Главная</a>
+                <a class="terra-navigation-link" href="#">Как играть</a>
+                <a class="terra-navigation-link" href="#">Поддержка</a>
+            </div>
+            {% if logined %}
+                <div class="terra-account-head" tabindex="1">
+                    <div class="terra-account-head-container">
+                        <img src="/api/get_head/{{ player_name }}" alt="{{ player_name }}">
+                    </div>
+                </div>
+                <div class="terra-account-nav">
+                    <div class="terra-account-nav-container">
+                        <div class="terra-account-nav-head-container">
+                            <div class="terra-account-nav-logo">
+                                <div class="terra-account-nav-logo-container">
+                                    <img src="/api/get_head/{{ player_name }}" alt="{{ player_name }}">
+                                </div>
+                            </div>
+                            <div class="terra-account-nav-name">
+                                <div class="terra-account-nav-name-container">
+                                    {{ player_name }}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul>
+                            <li><a class="" href="" aria-current="disable">Профиль</a></li>
+                            <li><a class="" href="" aria-current="disable">Ститистика</a></li>
+                            <li><a href=""><button class="terra-account-nav-exit-button" type="" href="/logout">Выйти</button></a></li>
+                        </ul>
+                    </div>
+                </div>
+            {% else %}
+                <div class="terra-navigation-auth">
+                    <button class="terra-auth-button button-primary" type="" href="/auth">
+                        <span>Войти</span>
+                    </button>
+                </div>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="terra-greeting">
+        <div class="terra-greeting-container">
+            <div class="terra-greeting-video">
+                <video class="terra-greeting-video__video" src="assets/resources/video/main_cinematic.mp4" data-video type="video/mp4" playsinline autoplay muted loop poster></video>
+            </div>
+            <div class="terra-greeting__header">
+                <div class="terra-greeting__header-text">
+                    <h4>Уникальный сервер</h4>
+                    <h2>TERRA</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="terra-description">
+        <div class="terra-description-container">
+            <div class="terra-description__section">
+                <div class="terra-description-header">
+                    <h2>Что такое ТЕРРА ?</h2>
+                    <div class="terra-description-text">
+                        <p>- это сервер, на котором игроки могут играть в обычный майнкрафт без 
+                            опасности быть загриференным другими игроками. Такой сервер создан для игроков, 
+                            которые ценят мирное взаимодействие с другими и хотят насладиться игрой в 
+                            полной мере, строить, исследовать и взаимодействовать друг с другом не 
+                            беспокоясь о негативных последствиях.</p>
+                    </div>
+                </div>
+                
+                <!--<div class="terra-description-logo-container">
+                    <div class="terra-description-logo">
+                        <img src="assets/resources/img/greeting_logo.png" alt="">
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="terra-features--container">
+        <div class="terra-features">
+            <div class="terra-features__header">
+                <div class="terra-features__header-content">
+                    <h2>Особенности Сервера</h2>
+                    <div class="terra-features__header-text">
+                        <p>Какая-то полезная информация UwU</p>
+                    </div>
+                </div>
+                <a class="terra-features__header-link" target="_self" aria-label="Смотреть все коллекционные предметы" href="">Подробнее о особенностях</a>
+            </div>
+            <div class="terra-features__slider">
+                <div class="terra-features__slider-container">
+                    <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="false">
+                        <div class="itc-slider-wrapper">
+                            <div class="itc-slider-items">
+                                <div class="itc-slider-item terra-features__slide">
+                                    <a class="terra-features__slide-link" href="#">
+                                        <div class="terra-features__slide-image">
+                                            <img src="assets/resources/slides/Homepage_Collectables-Carousel-H_Java-Bedrock_414x414_01.jpg" alt="">
+                                        </div>
+                                        <div class="terra-features__slide-text">
+                                            <p class="terra-features__slide-text-main">Ядро</p>
+                                            <h2 class="terra-features__slide-text-description">Ванильность</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="itc-slider-item terra-features__slide">
+                                    <a class="terra-features__slide-link" href="#">
+                                        <div class="terra-features__slide-image">
+                                            <img src="assets/resources/img/sliders/redstone.png" alt="">
+                                        </div>
+                                        <div class="terra-features__slide-text">
+                                            <p class="terra-features__slide-text-main">Оптимизация</p>
+                                            <h2 class="terra-features__slide-text-description">Игра без лагов</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="itc-slider-item terra-features__slide">
+                                    <a class="terra-features__slide-link" href="#">
+                                        <div class="terra-features__slide-image">
+                                            <img src="assets/resources/img/sliders/hight.png" alt="">
+                                        </div>
+                                        <div class="terra-features__slide-text">
+                                            <p class="terra-features__slide-text-main">Генерация</p>
+                                            <h2 class="terra-features__slide-text-description">Высота мира 1024 блоков</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="itc-slider-item terra-features__slide">
+                                    <a class="terra-features__slide-link" href="#">
+                                        <div class="terra-features__slide-image">
+                                            <img src="assets/resources/img/sliders/resourcepack.png" alt="">
+                                        </div>
+                                        <div class="terra-features__slide-text">
+                                            <p class="terra-features__slide-text-main">Кастомизация</p>
+                                            <h2 class="terra-features__slide-text-description">Кастомные предметы</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="itc-slider-item terra-features__slide">
+                                    <a class="terra-features__slide-link" href="#">
+                                        <div class="terra-features__slide-image">
+                                            <img src="assets/resources/slides/slide_2_generation_hight.png" alt="">
+                                        </div>
+                                        <div class="terra-features__slide-text">
+                                            <p class="terra-features__slide-text-main">Генерация</p>
+                                            <h2 class="terra-features__slide-text-description">Увеличенная высота</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="itc-slider-btn itc-slider-btn-prev"></button>
+                        <button class="itc-slider-btn itc-slider-btn-next"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="terra-admins">
+        <div class="terra-admins-container">
+            <div class="terra-admins-header">
+                <div class="terra-admins-header-content">
+                    <h2>Админский Соостав<br> Сервера</h2>
+                    <div class="terra-admins-header-text">
+                        <p>Сервер нуждается в администрации состоящей из талантливых людей. <br> Администрация сервера следит за соблюдением правил и наказывает нарушителей, чтобы обеспечить безопасную, приятную и наиболее комфортную игровую среду для всех участников.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="terra-admins-players-cards">
+                <div class="terra-admins-player-card">
+                    <div class="terra-admins-player-card-img">
+                        <img src="assets/resources/img/admins/ampermeter.png" alt="Ampermeter">
+                    </div>
+                    <div class="terra-admins-player-card-text">
+                        <h2 class="terra-admins-player-card-name">Ampermeter</h2>
+                        <p class="terra-admins-player-card-post">Основатель</p>
+                    </div>
+                </div>
+                <div class="terra-admins-player-card">
+                    <div class="terra-admins-player-card-img">
+                        <img src="assets/resources/img/admins/drekord.png" alt="DreKord">
+                    </div>
+                    <div class="terra-admins-player-card-text">
+                        <h2 class="terra-admins-player-card-name">DreKord</h2>
+                        <p class="terra-admins-player-card-post">Инженер проекта</p>
+                    </div>
+                </div>
+                <div class="terra-admins-player-card">
+                    <div class="terra-admins-player-card-img">
+                        <img src="assets/resources/img/admins/alexandor.png" alt="Alexandor_">
+                    </div>
+                    <div class="terra-admins-player-card-text">
+                        <h2 class="terra-admins-player-card-name">Alexandor</h2>
+                        <p class="terra-admins-player-card-post">Инженер проекта</p>
+                    </div>
+                </div>
+                <div class="terra-admins-player-card">
+                    <div class="terra-admins-player-card-img">
+                        <img src="assets/resources/img/admins/mrmalinchik.png" alt="MrMalinchik">
+                    </div>
+                    <div class="terra-admins-player-card-text">
+                        <h2 class="terra-admins-player-card-name">MrMalinchik</h2>
+                        <p class="terra-admins-player-card-post">Куратор Ассистентов</p>
+                    </div>
+                </div>
+                <div class="terra-admins-player-card">
+                    <div class="terra-admins-player-card-img">
+                        <img src="assets/resources/img/admins/errornotfound.png" alt="_ErrorNotFound">
+                    </div>
+                    <div class="terra-admins-player-card-text">
+                        <h2 class="terra-admins-player-card-name">ErrorNotFound</h2>
+                        <p class="terra-admins-player-card-post">Ассистент</p>
+                    </div>
+                </div>
+                <div class="terra-admins-player-card">
+                    <div class="terra-admins-player-card-img">
+                        <img src="assets/resources/img/admins/timca.png" alt="timca1091">
+                    </div>
+                    <div class="terra-admins-player-card-text">
+                        <h2 class="terra-admins-player-card-name">Timca</h2>
+                        <p class="terra-admins-player-card-post">Ассистент</p>
+                    </div>
+                </div>
+                <div class="terra-admins-player-card">
+                    <div class="terra-admins-player-card-img">
+                        <img src="assets/resources/img/admins/dmi.png" alt="DMI">
+                    </div>
+                    <div class="terra-admins-player-card-text">
+                        <h2 class="terra-admins-player-card-name">DMI</h2>
+                        <p class="terra-admins-player-card-post">Ассистент</p>
+                    </div>
+                </div>
+                <div class="terra-admins-player-card">
+                    <div class="terra-admins-player-card-img">
+                        <img src="assets/resources/img/admins/kirieshka.png" alt="Kirieshka">
+                    </div>
+                    <div class="terra-admins-player-card-text">
+                        <h2 class="terra-admins-player-card-name">Kirieshka</h2>
+                        <p class="terra-admins-player-card-post">Ассистент</p>
+                    </div>
+                </div>
+                <div class="terra-admins-player-card">
+                    <div class="terra-admins-player-card-img">
+                        <img src="assets/resources/img/admins/crileaf.png" alt="CriLeaf">
+                    </div>
+                    <div class="terra-admins-player-card-text">
+                        <h2 class="terra-admins-player-card-name">CriLeaf</h2>
+                        <p class="terra-admins-player-card-post">????</p>
+                    </div>
+                </div>
+                <div class="terra-admins-player-card">
+                    <div class="terra-admins-player-card-img">
+                        <img src="assets/resources/img/admins/garddljustice.png" alt="GardDLJustice">
+                    </div>
+                    <div class="terra-admins-player-card-text">
+                        <h2 class="terra-admins-player-card-name">GardDLJustice</h2>
+                        <p class="terra-admins-player-card-post">Ассистент</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="terra-comunity-projects"></div>
+    <div class="terra-dynamic-maps">
+        <div class="terra-dynamic-maps-container">
+            <div class="terra-dynamic-maps-header">
+                <div class="terra-dynamic-maps-header-container">
+                    <h2>Онлайн карта сервера</h2>
+                    <div class="terra-dynamic-maps-header-text">
+                        <p>Отслеживайте все изменения на сервере онлайн.</p>
+                    </div>
+                    <div class="terra-dynamic-maps-button-container">
+                        <a class="terra-dynamic-maps-button button-green" href="http://5.83.140.204:25649/?world=minecraft_overworld">
+                            Перейти на карту
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="terra-dynamic-maps-background">
+                <img src="assets/resources/backgrounds/6fc75499596d329e8bc3ff21a848ac07.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="terra-media-source">
+        <div class="terra-media-source-text">
+            <h2>Подпишитесь на новости сервера</h2>
+        </div>
+        <div class="terra-media-source-container">
+            <div>
+                <a href="https://www.youtube.com/@moonaticks4231/featured" aria-label="TERRA в YouTube" title="TERRA в YouTube" target="_blank" role="link">
+                    <div class="terra-media-icon-container" style="--fill-color: #fa0020;">
+                        <img class="terra-media-icon" src="assets/resources/img/icons/youtube-svg.svg" alt="">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.twitch.tv/moonaticks" aria-label="TERRA на Твиче" title="TERRA на Твиче" target="_blank" role="link">
+                    <div class="terra-media-icon-container" style="--fill-color: #6441a5;">
+                        <img class="terra-media-icon" src="assets/resources/img/icons/twitch-svg.svg" alt="">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://vk.com/tetratmc" aria-label="TERRA в ВК" title="TERRA в ВК" target="_blank" role="link">
+                    <div class="terra-media-icon-container" style="--fill-color: #237bda;">
+                        <img class="terra-media-icon" src="assets/resources/img/icons/vk-svg.svg" alt="">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://t.me/TERRA_servert" aria-label="TERRA в Телеграм" title="TERRA в Телеграм" target="_blank" role="link">
+                    <div class="terra-media-icon-container" style="--fill-color: #27a7e7;">
+                        <img class="terra-media-icon" src="assets/resources/img/icons/telegram-svg.svg" alt="">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://discord.gg/REKrd8pysY" aria-label="TERRA в Дискорде" title="TERRA в Дискорде" target="_blank" role="link">
+                    <div class="terra-media-icon-container" style="--fill-color: #7289da;">
+                        <img class="terra-media-icon" src="assets/resources/img/icons/discord-svg.svg" alt="">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://app.revolt.chat/invite/sE4VnkeF" aria-label="TERRA в Revolt" title="TERRA в Revolt" target="_blank" role="link">
+                    <div class="terra-media-icon-container" style="--fill-color: #FD6671;">
+                        <img class="terra-media-icon" src="assets/resources/img/icons/revolt-svg.svg" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="terra-footer">
+        <div class="terra-footer-copyright">
+            <div class="terra-footer-copyright-item">
+                <a href="">Политика конфиденциальности</a>
+            </div>
+            <div class="terra-footer-copyright-item">
+                <span>© 2024 TERRA</span>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        .alerts {
+            position: fixed;
+            bottom: 6%;
+            left: 2%;
+            width: auto;
+            height: auto;
+            background-color: var(--terra_mc-color-grey-5);
+            z-index: 200;
+            border: 2px solid var(--terra_mc-color-vanilla-green-5);
+            border-radius: 8px;
+            box-shadow: 0px 0px 39px 13px rgba(0, 0, 0, 0.96);
+        }
+        .alerts-container {
+            padding: 8px;
+        }
+        .alerts-container h4 {
+            color: #fff;
+            font-size: 1.0rem; 
+            letter-spacing: .04em;
+            font-family: var(--terra_mc-vanilla-fontlist);
+            align-items: center;
+            font-weight: 300;
+        }
+        .alerts-container p {
+            color: #fff;
+            font-weight: 400;
+            font-size: 0.85rem;
+            line-height: 1.5625rem;
+            font-family: var(--terra_mc-default-fontlist);
+            align-items: center;
+        }
+    </style>
+    <div class="alerts" style="visibility: vissible;">
+        <div class="alerts-container">
+            <h4>Cайт на технических работах!!!</h4>
+            <p>- Многие функции не работают</p>
+            <p>- Внешний вид НЕ ОКОНЧАТЕЛЬНЫЙ!</p>
+        </div>
+    </div>
+    
+    <script>
+        $(window).scroll(function () {
+            var $heightScrolled = $(window).scrollTop();
+            if ($heightScrolled < 1) {
+                setTimeout(function() {
+                    $('.terra-navigation-container').removeClass("-is-scrolled")
+                }, 200);
+            } else {
+                $('.terra-navigation-container').addClass("-is-scrolled")
+            }
+        });
+    </script>
+</body>
+</html>

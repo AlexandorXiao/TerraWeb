@@ -1,0 +1,737 @@
+:root {
+    /* COMMON */
+    --terra_mc-content-container-padding_y: 20px 0;
+    --terra_mc-content-grid-size: 1140px;
+    --terra_mc-content-header-margin_x: 64px 0;
+    --terra_mc-content-header-padding: 0 20px;
+    --terra_mc-content-header-letter-spacing: .05em;
+    --terra_mc-content-header-font-size: 2.5rem;
+    --terra_mc-content-header-line-height: 3.5rem;
+    --terra_mc-content-text-margin: 1rem;
+    --terra_mc-content-text-font-size: 1.2rem;
+    --terra_mc-content-text-padding_x: 0 24px;
+    --terra_mc-content-header-text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.61);
+    /* SLIDER */
+    --terra-slider-slide-gap: 1.0rem;
+    --terra-slider-slide-size: 280px;
+    /* GREETING */
+    --terra_mc-greeting-container-min-height: 720px;
+    --terra_mc-greeting-video-container-z-index: 5;
+    /* GREETING HEADER */
+    --terra_mc-greeting-header-text-padding: 80px 64px 83px 64px;
+    --terra_mc-greeting-header-text-shadow: 0px 0px 10px rgba(0,0,0,0.61);
+    --terra_mc-greeting-header-text-h2-letter-spacing: .07em;
+    --terra_mc-greeting-header-text-h2-font-size: 4.5rem;
+    --terra_mc-greeting-header-text-h2-line-height: 4.5rem;
+    --terra_mc-greeting-header-text-h2-padding-top: 8px;
+    --terra_mc-greeting-header-text-h4-letter-spacing: .04em;
+    --terra_mc-greeting-header-text-h4-font-size: 2.0rem;
+    --terra_mc-greeting-header-text-h4-line-height: 3.5rem;
+    --terra_mc-greeting-header-text-h4-padding-top: 16px;
+    /* DESCRIPTION */
+    --terra_mc-description-z-index: 10;
+    --terra_mc-description-box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.5);
+    --terra_mc-description-background: var(--terra_mc-color-black-10);
+    --terra_mc-description-font-color: var(--terra_mc-dark-font-color);
+    /* ADMINS CARDS */
+    --terra_mc-admins-header-content: 0 20px;
+    --terra_mc-admins-background-color: var(--terra_mc-color-raw-black);
+    --terra_mc-admins-players-cards-padding_bottom: 64px;
+    --terra_mc-admins-player-card-margin: 8px auto;
+    --terra_mc-admins-player-card-max-width: 220px;
+    --terra_mc-admins-player-card-text-max-height: 120px;
+    --terra_mc-admins-player-card-text-padding: 8px;
+    --terra_mc-admins-player-card-text-z-index: 10;
+    --terra_mc-admins-player-card-name-box-shadow: 2px 2px 0 rgba(0, 0, 0, .3);
+    --terra_mc-admins-player-card-name-font-weight: 400;
+    --terra_mc-admins-player-card-name-font-size: 1.1rem;
+    --terra_mc-admins-player-card-name-letter-spacing: .04em;
+    --terra_mc-admins-player-card-name-margin-top: 12px;
+    /* MAPS */
+    --terra_mc-dynamic-maps-min-height: 320px;
+    --terra_mc-dynamic-maps-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.6) inset;
+    --terra_mc-dynamic-maps-z-index: 30;
+    --terra_mc-dynamic-maps-padding: 120px 0;
+    --terra_mc-dynamic-maps-background-color: rgba(29, 31, 34, .4);
+    --terra_mc-dynamic-maps-background-blur: 6px;
+    --terra_mc-dynamic-maps-background-img-z-index: 10;
+    --terra_mc-dynamic-maps-background-img-filter: grayscale(50%);
+    --terra_mc-dynamic-maps-button-padding: 15px 30px;
+    --terra_mc-dynamic-maps-button-font-size: 18px;
+    --terra_mc-dynamic-maps-button-line-height: 20px;
+    --terra_mc-dynamic-maps-button-font-weight: 500;
+    --terra_mc-dynamic-maps-button-letter-spacing: .03em;
+    /* FOOTER MEDIA */
+    --terra_mc-media-source-padding: 19px 20px 9px 20px;
+    --terra_mc-media-source-container-margin-top: 15px;
+    --terra_mc-media-source-container-margin: auto .35pc;
+    --terra_mc-media-source-container-padding-bottom: 15px;
+    --terra_mc-media-icon-container-size: 50px;
+    --terra_mc-media-icon-container-border-radius: 35px;
+    --terra_mc-media-icon-img-size: 60%;
+    --terra_mc-media-icon-img-margin: 10px;
+    --terra_mc-content-header-font-size-media: 1.4rem;
+    --terra_mc-content-header-font-weight-media: 400;
+    /* FOOTER END */
+    --terra_mc-footer-background-color: var(--terra_mc-color-raw-black);
+    --terra_mc-footer-padding: 32px 70px;
+    --terra_mc-footer-font-size-copyright: 14px;
+    --terra_mc-component-highlight-color: var(--terra_mc-green-button-background);
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        /* COMMON */
+        --terra_mc-content-header-margin_x: 42px 0;
+        --terra_mc-content-header-letter-spacing: .04em;
+        --terra_mc-content-header-font-size: 1.8rem;
+        --terra_mc-content-header-line-height: 3.0rem;
+        --terra_mc-content-text-font-size: 1.0rem;
+        --terra_mc-content-text-padding_x: 0 24px;
+        /* GREETING HEADER */
+        --terra_mc-greeting-header-text-padding: 80px 32px 83px 32px;
+        --terra_mc-greeting-header-text-h2-font-size: 3.5rem;
+        --terra_mc-greeting-header-text-h2-line-height: 4.0rem;
+        --terra_mc-greeting-header-text-h2-padding-top: 16px;
+        --terra_mc-greeting-header-text-h4-font-size: 1.5rem;
+        --terra_mc-greeting-header-text-h4-line-height: 2.2rem;
+        --terra_mc-greeting-header-text-h4-padding-top: 32px;
+        /* MAPS */
+        --terra_mc-dynamic-maps-button-font-size: 14px;
+        /* FOOTER MEDIA */
+        --terra_mc-media-source-container-margin: auto .16pc;
+        --terra_mc-media-icon-container-size: 40px;
+        --terra_mc-media-icon-container-border-radius: 20px;
+        --terra_mc-media-icon-img-size: 60%;
+        --terra_mc-media-icon-img-margin: 8px;
+        --terra_mc-content-header-font-size-media: 1.1rem;
+        --terra_mc-content-header-font-weight-media: 400;
+        /* FOOTER END */
+        --terra_mc-footer-padding: 32px 5.5555555556vw;
+    }
+}
+
+
+
+/*### GREETING SECTION ###*/
+.terra-greeting {
+    display: block;
+    width: 100%;
+}
+.terra-greeting-container {
+    display: block;
+    width: 100%;
+    height: var(--terra_mc-greeting-container-min-height);
+    position: relative;
+}
+/*### GREETING SECTION VIDEO ###*/
+.terra-greeting-video {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    min-height: inherit;
+    overflow: hidden;
+    position: relative;
+}
+.terra-greeting-video-container {
+    overflow: hidden;
+}
+.terra-greeting-video-container, .terra-greeting-video__video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: var(--terra_mc-greeting-video-container-z-index);
+}
+.terra-greeting-video__video {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+
+/*### GREETING HEADER SECTION ###*/
+.terra-greeting__header {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    bottom: 0;
+    z-index: 10;
+    margin: auto 0;
+}
+.terra-greeting__header-text {
+    text-align: center;
+    padding: var(--terra_mc-greeting-header-text-padding);
+}
+.terra-greeting__header-text h2 {
+    text-shadow: var(--terra_mc-greeting-header-text-shadow);
+    font-family: var(--terra_mc-vanilla-fontlist);
+    color: var(--terra_mc-light-font-color);
+    letter-spacing: var(--terra_mc-greeting-header-text-h2-letter-spacing);
+    font-size: var(--terra_mc-greeting-header-text-h2-font-size);
+    line-height: var(--terra_mc-greeting-header-text-h2-line-height);
+    padding-top: var(--terra_mc-greeting-header-text-h2-padding-top);
+}
+.terra-greeting__header-text h4 {
+    text-shadow: var(--terra_mc-greeting-header-text-shadow);
+    font-family: var(--terra_mc-vanilla-fontlist);
+    color: var(--terra_mc-light-font-color);
+    letter-spacing: var(--terra_mc-greeting-header-text-h4-letter-spacing);
+    font-size: var(--terra_mc-greeting-header-text-h4-font-size);
+    line-height: var(--terra_mc-greeting-header-text-h4-line-height);
+    padding-top: var(--terra_mc-greeting-header-text-h4-padding-top);
+}
+
+
+/*### DESCRIPTIONS SECTION ###  -- FULL ROOT*/
+.terra-description {
+    position: relative;
+    z-index: var(--terra_mc-description-z-index);
+    box-shadow: var(--terra_mc-description-box-shadow);
+    background-color: var(--terra_mc-description-background);
+}
+.terra-description-container {
+    padding: var(--terra_mc-content-container-padding_y);
+    max-width: var(--terra_mc-content-grid-size);
+    margin: 0 auto;
+}
+.terra-description__section {
+    display: flex;
+    flex-wrap: wrap;
+}
+.terra-description-header {
+    text-align: center;
+    flex: 0 0 auto;
+    width: 100%;
+    margin: var(--terra_mc-content-header-margin_x);
+    padding: var(--terra_mc-content-header-padding);
+}
+.terra-description-header h2 {
+    font-family: var(--terra_mc-vanilla-fontlist);
+    color: var(--terra_mc-description-font-color);
+    font-size: var(--terra_mc-content-header-font-size);
+    letter-spacing: var(--terra_mc-content-header-letter-spacing);
+    line-height: var(--terra_mc-content-header-line-height);
+}
+.terra-description-text {
+    margin-top: var(--terra_mc-content-text-margin);
+}
+.terra-description-text p {
+    font-family: var(--terra_mc-default-fontlist);
+    color: var(--terra_mc-description-font-color);
+    font-size: var(--terra_mc-content-text-font-size);
+    padding: var(--terra_mc-content-text-padding_x);
+}
+
+
+
+
+
+
+
+
+
+
+/*### FEATURES SECTION ###*/
+.terra-features--container {
+    display: block;
+}
+.terra-features {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*### FEATURES_HEADER SECTION ###*/
+.terra-features__header {
+    z-index: 25;
+    flex: 0 0 auto;
+    background-color: var(--terra_mc-color-rich-black);
+}
+.terra-features__header-content {
+    margin-bottom: 24px;
+}
+.terra-features__header-content h2 {
+    font-family: var(--terra_mc-vanilla-fontlist);
+    color: var(--terra_mc-light-font-color);
+    letter-spacing: .05em;
+}
+.terra-features__header-text {
+    margin-top: 1rem;
+}
+.terra-features__header-text p {
+    font-family: var(--terra_mc-default-fontlist);
+    color: var(--terra_mc-light-font-color);
+}
+.terra-features__header-link {
+    font-family: var(--terra_mc-default-fontlist);
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    color: var(--terra_mc-green-link-color, var(--terra_mc-core-green-6));
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+}
+
+/*### FEATURES_SPLIT SECTION ###*/
+.terra-features__split {
+    width: 20px;
+    height: 400px;
+}
+.terra-features__split-container {
+    width: 100%;
+    height: 100%;
+}
+.split-rect_2 {
+    width: 100%;
+    height: 100%;
+    stroke-width: 0px;
+    fill: var();
+}
+
+/*### FEATURES_SLIDER SECTION ###*/
+.terra-features__slider {
+    flex: 0 0 auto;
+    background-color: var(--terra_mc-color-rich-black);
+}
+.terra-features__slider-container {
+    margin: 0 auto;
+}
+.itc-slider {
+    position: relative;
+    margin: 0 auto;
+}
+.itc-slider-wrapper {
+    overflow: hidden;
+}
+.itc-slider-items {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    counter-reset: slide;
+    gap: var(--terra-slider-slide-gap);
+}
+.itc-slider-transition-none {
+    transition: none;
+}
+.itc-slider-item {
+    flex: 0 0 auto;
+    position: relative;
+    width: var(--terra-slider-slide-size);
+    max-height: 390px;
+    user-select: none;
+    will-change: transform;
+    counter-increment: slide;
+}
+.terra-features__slide {
+    background-color: var(--terra_mc-color-off-black);
+    scroll-snap-align: start;
+    text-align: center;
+    padding-bottom: 3px;
+    flex: 0 0 auto;
+}
+.terra-features__slide-link {
+    display: block;
+    position: relative;
+}
+.itc-slider-item-active {
+    z-index: 30;
+    position: relative;
+}
+.itc-slider-item-active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: 2px 2px 3px;
+    transition: all .3s;
+}
+.itc-slider-item-active:hover::before {
+    content: '';
+    position: absolute;
+    left: -2.5%;
+    width: 105%;
+    top: -2.5%;
+    height: 105%;
+    background-color: var(--terra_mc-color-vanilla-green-6);
+    box-shadow: 0px 0px 28px -10px rgba(255, 255, 255, 0.3);
+    z-index: -1;
+    transition: all .3s;
+}
+.itc-slider-item-active:hover .terra-features__slide-image img{
+    filter: grayscale(0%);
+    transform: scale(1.08);
+}
+.terra-features__slide-image img {
+    display: block;
+    width: 100%;
+    max-width: var(--terra-slider-slide-size);
+    z-index: 10;
+    transition: all .3s;
+}
+.terra-features__slide-text {
+    max-height: 120px;
+    text-align: left;
+    padding: 16px;
+    width: 100%;
+    z-index: 10;
+}
+.terra-features__slide-text-main {
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, .3);
+    display: inline-block;
+    font-family: var(--terra_mc-default-fontlist);
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: var(--terra_mc-color-grey-1) !important;
+    max-width: calc(100% - 32px);
+}
+.terra-features__slide-text-description {
+    color: var(--terra_mc-color-white) !important;
+    line-height: 1.5325rem;
+    margin-top: 4px;
+    max-width: calc(100% - 32px);
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: .04em;
+    font-family: var(--terra_mc-default-fontlist);
+}
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    .terra-navigation-content {
+        visibility: hidden;
+        display: none;
+    }
+    .terra-features__header {
+        width: 100%;
+        padding: 24px 20px 24px 20px;
+        text-align: center;
+    }
+    .terra-features__slider {
+        width: 100%;
+    }
+    .itc-slider-wrapper {
+        padding: 24px 0 24px;
+        width: var(--terra-slider-slide-size);
+        margin: 0 auto;
+    }
+    .terra-features__slide-image img {
+        filter: grayscale(0%);
+    }
+    .itc-slider-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .terra-features__header {
+        width: 460px;
+        padding: 80px 0 83px 24px;
+    }
+    .terra-features__header-content h2 {
+        font-size: 1.5rem;
+        line-height: 2.0rem;
+    }
+    .terra-features__slider {
+        width: calc(100% - 460px);
+    }
+    .itc-slider-wrapper {
+        padding: 80px 0 83px 0.5rem;
+    }
+    .terra-features__slide-image img {
+        filter: grayscale(100%);
+    }
+}
+@media (min-width: 1024px) {
+    .terra-features__header {
+        width: 460px;
+        padding: 48px 0 48px 64px;
+    }
+    .terra-features__header-content h2 {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+    .terra-features__slider {
+        width: calc(100% - 460px);
+    }
+    .itc-slider-wrapper {
+        padding: 48px 0 48px 0.5rem;
+    }
+}
+@media (min-width: 1280px) {
+    .terra-features__header {
+        width: 460px;
+    }
+    .terra-features__slider {
+        width: calc(100% - 460px);
+    }
+}
+@media (min-width: 1460px) {
+    .terra-features__header {
+        width: 30%;
+    }
+    .terra-features__slider {
+        width: 70%;
+    }
+}
+
+/*### ADMINS CARDS SECTION ###*/
+.terra-admins {
+    background-color: var(--terra_mc-admins-background-color);
+}
+.terra-admins-container {   
+    padding: var(--terra_mc-content-container-padding_y);
+    max-width: var(--terra_mc-content-grid-size);
+    margin: 0 auto;
+}
+.terra-admins-header {
+    margin: var(--terra_mc-content-header-margin_x);
+}
+.terra-admins-header-content {
+    padding: var(--terra_mc-admins-header-content);
+    text-align: center;
+}
+.terra-admins-header-content h2 {
+    font-family: var(--terra_mc-vanilla-fontlist);
+    color: var(--terra_mc-light-font-color);
+    font-size: var(--terra_mc-content-header-font-size);
+    letter-spacing: var(--terra_mc-content-header-letter-spacing);
+    line-height: var(--terra_mc-content-header-line-height);
+}
+.terra-admins-header-text {
+    margin-top: var(--terra_mc-content-text-margin);
+}
+.terra-admins-header-text p {
+    font-family: var(--terra_mc-default-fontlist);
+    color: var(--terra_mc-light-font-color);
+    font-size: var(--terra_mc-content-text-font-size);
+    padding: var(--terra_mc-content-text-padding_x);
+}
+
+.terra-admins-players-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: var(--terra_mc-admins-players-cards-padding_bottom);
+    max-width: var(--terra_mc-content-grid-size);
+}
+@media (max-width: 680px) {
+    .terra-admins-players-cards {
+        display: none;
+    }
+}
+.terra-admins-player-card {
+    margin: var(--terra_mc-admins-player-card-margin);
+    background-color: var(--terra_mc-color-grey-6);
+    max-width: var(--terra_mc-admins-player-card-max-width);
+    transition: all .3s;
+    
+}
+.terra-admins-player-card-img img {
+    width: 100%;
+    filter: var(--terra_mc-img-png-shadow-drop-filter);
+    object-fit: cover;
+}
+.terra-admins-player-card-text {
+    text-align: center;
+    width: 100%;
+    max-height: var(--terra_mc-admins-player-card-text-max-height);
+    padding: var(--terra_mc-admins-player-card-text-padding);
+    z-index: var(--terra_mc-admins-player-card-text-z-index);
+}
+.terra-admins-player-card-name {
+    box-shadow: var(--terra_mc-admins-player-card-name-box-shadow);
+    background-color: var(--terra_mc-color-grey-5);
+    color: var(--terra_mc-color-white) !important;
+    font-weight: var(--terra_mc-admins-player-card-name-font-weight);
+    font-size: var(--terra_mc-admins-player-card-name-font-size);
+    letter-spacing: var(--terra_mc-admins-player-card-name-letter-spacing);
+    font-family: var(--terra_mc-vanilla-fontlist);
+    transition: all .3s;
+}
+.terra-admins-player-card-post {
+    margin-top: var(--terra_mc-admins-player-card-name-margin-top);
+    display: inline-block;
+    font-family: var(--terra_mc-default-fontlist);
+    text-transform: uppercase;
+    color: var(--terra_mc-color-grey-1) !important;
+}
+
+.terra-admins-player-card:hover {
+    filter: grayscale(0%);
+    transform: scale(1.08);
+    background-color: var(--terra_mc-color-vanilla-green-5);
+}
+.terra-admins-player-card:hover .terra-admins-player-card-name{
+    background-color: var(--terra_mc-color-vanilla-green-6);
+}
+
+
+
+/*### ADMINS CARDS SECTION ###*/
+.terra-dynamic-maps-container {
+    min-height: var(--terra_mc-dynamic-maps-min-height);
+    position: relative;
+    overflow: hidden;
+}
+.terra-dynamic-maps-header {
+    box-shadow: var(--terra_mc-dynamic-maps-box-shadow);
+    position: relative;
+    z-index: var(--terra_mc-dynamic-maps-z-index);
+    padding: var(--terra_mc-dynamic-maps-padding);
+    background-color: var(--terra_mc-dynamic-maps-background-color);
+    backdrop-filter: blur(var(--terra_mc-dynamic-maps-background-blur));
+}
+.terra-dynamic-maps-header-container {
+    text-align: center;
+    padding: var(--terra_mc-content-container-padding_y);
+    max-width: var(--terra_mc-content-grid-size);
+    margin: 0 auto;
+}
+.terra-dynamic-maps-header h2 {
+    text-shadow: var(--terra_mc-content-header-text-shadow);
+    font-family: var(--terra_mc-vanilla-fontlist);
+    color: var(--terra_mc-light-font-color);
+    font-size: var(--terra_mc-content-header-font-size);
+    letter-spacing: var(--terra_mc-content-header-letter-spacing);
+    line-height: var(--terra_mc-content-header-line-height);
+}
+.terra-dynamic-maps-header-text {
+    margin-top: var(--terra_mc-content-text-margin);
+}
+.terra-dynamic-maps-header-text p {
+    text-shadow: var(--terra_mc-content-header-text-shadow);
+    font-family: var(--terra_mc-default-fontlist);
+    color: var(--terra_mc-light-font-color);
+    font-size: var(--terra_mc-content-text-font-size);
+    padding: var(--terra_mc-content-text-padding_x);
+}
+
+.terra-dynamic-maps-button-container {
+    margin-top: 60px;
+}
+.terra-dynamic-maps-button.button-green {
+    background: var(--terra_mc-green-button-background);
+    box-shadow: var(--terra_mc-green-button-box-shadow);
+    color: var(--terra_mc-color-white);
+    text-shadow: var(--terra_mc-green-button-text-shadow);
+}
+.terra-dynamic-maps-button {
+    margin: auto;
+    padding: var(--terra_mc-dynamic-maps-button-padding);
+    border: none;
+    font-family: var(--terra_mc-vanilla-fontlist);
+    font-size: var(--terra_mc-dynamic-maps-button-font-size);
+    line-height: var(--terra_mc-dynamic-maps-button-line-height);
+    font-weight: var(--terra_mc-dynamic-maps-button-font-weight);
+    letter-spacing: var(--terra_mc-dynamic-maps-button-letter-spacing);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .25s, opacity .75s .5s;
+    user-select: none;
+    cursor: pointer;
+    pointer-events: all;
+}
+.terra-dynamic-maps-button.button-green:hover {
+    background: var(--terra_mc-green-button-background--hover);
+}
+.terra-dynamic-maps-background,  .terra-dynamic-maps-background img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: var(--terra_mc-dynamic-maps-background-img-z-index);
+}
+.terra-dynamic-maps-background img{
+    object-fit: cover;
+    filter: var(--terra_mc-dynamic-maps-background-img-filter);
+}
+
+
+
+/*### FOOTER MEDIA SECTION ###*/
+.terra-media-source {
+    background-color: var(--terra_mc-color-rich-black);
+    padding: var(--terra_mc-media-source-padding);
+}
+.terra-media-source-text {
+    text-align: center;
+    flex: 0 0 auto;
+    width: 100%;
+}
+.terra-media-source-text h2 {
+    text-transform: uppercase !important;
+    font-weight: var(--terra_mc-content-header-font-weight-media);
+    font-family: var(--terra_mc-default-fontlist);
+    color: var(--terra_mc-light-font-color);
+    font-size: var(--terra_mc-content-header-font-size-media);
+    letter-spacing: var(--terra_mc-content-header-letter-spacing);
+}
+.terra-media-source-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: var(--terra_mc-media-source-container-margin-top);
+}
+.terra-media-source-container div {
+    margin: var(--terra_mc-media-source-container-margin);
+    padding-bottom: var(--terra_mc-media-source-container-padding-bottom);
+}
+.terra-media-icon-container {
+    width: var(--terra_mc-media-icon-container-size);
+    height: var(--terra_mc-media-icon-container-size);
+    background-color: var(--terra_mc-color-black);
+    border-radius: var(--terra_mc-media-icon-container-border-radius);
+    position: relative;
+    transition: all .3s;
+}
+.terra-media-icon-container img {
+    position: absolute;
+    height: var(--terra_mc-media-icon-img-size);
+    width: var(--terra_mc-media-icon-img-size);
+    margin: var(--terra_mc-media-icon-img-margin);
+    left: 0;
+    top: 0;
+}
+.terra-media-icon {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.terra-media-source-container div:hover .terra-media-icon-container {
+    background-color: var(--fill-color);
+}
+
+
+
+/* FOOTER END */
+.terra-footer {
+    background-color: var(--terra_mc-footer-background-color);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--terra_mc-footer-padding);
+}
+.terra-footer-copyright {
+    display: flex;
+    flex-wrap: wrap;
+}
+.terra-footer-copyright-item {
+    display: inline-block;
+    font-family: var(--terra_mc-default-fontlist);
+    color: var(--terra_mc-light-font-color);
+    font-size: var(--terra_mc-footer-font-size-copyright);
+}
+.terra-footer-copyright-item:before {
+    color: var(--terra_mc-component-highlight-color);
+    content: "•";
+    display: inline-block;
+    margin: 0 .85em;
+}
